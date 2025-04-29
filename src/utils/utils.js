@@ -7,23 +7,20 @@ const overrideStyle = {
     alignItems: "center"
 }
 
-// Comment out production settings for now
-// const production = 'production'
-// const dev = 'development'
 
-// const mode = production
+const production = 'production'
+const dev = 'development'
 
-// Set mode to 'development' directly
-const mode = 'development'
+const mode = production
 
 let app_url, api_url
 
-if (mode === "production") {
-    // app_url = "https://dashboard-ecommerce-two.vercel.app"
-    // api_url = "https://api-ecommerce-fos4.onrender.com"
+if (mode === production) {
+    app_url = "https://multi-vendor-dashboard-psi.vercel.app/login"
+    api_url = "https://multi-vendor-backend-l3yd.onrender.com"
 } else {
-    app_url = 'http://localhost:3001'  // Frontend URL
-    api_url = 'http://localhost:5000'  // Backend URL
+    app_url = 'http://localhost:3001'
+    api_url = 'http://localhost:5000'
 }
 
 const socket = io(api_url)
