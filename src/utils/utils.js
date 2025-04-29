@@ -1,4 +1,5 @@
 import io from 'socket.io-client'
+
 const overrideStyle = {
     display: 'flex',
     margin: '0 auto',
@@ -7,15 +8,11 @@ const overrideStyle = {
     alignItems: "center"
 }
 
-
-const production = 'production'
-const dev = 'development'
-
-const mode = production
+const mode = 'production' // Set to 'production'
 
 let app_url, api_url
 
-if (mode === production) {
+if (mode === "production") {
     app_url = "https://multi-vendor-dashboard-psi.vercel.app/login"
     api_url = "https://multi-vendor-backend-l3yd.onrender.com"
 } else {
